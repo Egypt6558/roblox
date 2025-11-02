@@ -1,0 +1,223 @@
+local Translations = {
+    ["Copy Discord Link"] = "复制Discord链接",
+    ["Join Dc For Free Bobuc:0"] = "加入DC免费获取Bobuc:0",
+    ["Characther Anti Fall Damage"] = "角色防坠落伤害",
+    ["You will not take any damage when you fall from a height."] = "从高处坠落时不会受到任何伤害。",
+    ["Gravity Anti Fall Damage"] = "重力防坠落伤害",
+    ["Weather Effects"] = "天气效果",
+    ["Remove Blizzard"] = "移除暴雪",
+    ["Removes blizzard particle effects"] = "移除暴雪粒子效果",
+    ["Remove Sandstorm"] = "移除沙尘暴",
+    ["Removes sandstorm particle effects"] = "移除沙尘暴粒子效果",
+    ["Places"] = "地点",
+    ["Waiting Place"] = "等待区",
+    ["Teleport To Waiting Place"] = "传送到等待区",
+    ["Map"] = "地图",
+    ["Teleport To Map"] = "传送到地图",
+    ["Movement"] = "移动",
+    ["Speed"] = "速度",
+    ["On/Off With V Key"] = "按V键开关",
+    ["Speed Boost Value"] = "速度增益值",
+    ["Speed Multiplier"] = "速度倍率",
+    ["Jump"] = "跳跃",
+    ["Teleport Super Jump"] = "传送超级跳跃",
+    ["Jump Boost Value"] = "跳跃增益值",
+    ["Epic slider"] = "史诗级滑块",
+    ["Inf Yield"] = "无限收益",
+    ["Best Admin Panel Script"] = "最佳管理面板脚本",
+    ["Dex Explorer"] = "Dex资源管理器",
+    ["Normal pc/mobile White Dex"] = "普通电脑/移动版白色Dex",
+    ["Remote Spy"] = "远程监视",
+    ["Just a Remote Spy Script"] = "仅一个远程监视脚本",
+    ["KeyBoard"] = "键盘",
+    ["Mobile KeyBoard Gui"] = "移动版键盘界面",
+    ["Anim Logger"] = "动画记录器",
+    ["Animation ID Grabber"] = "动画ID获取器",
+    ["f3x"] = "f3x建筑工具",
+    ["infyield f3x Build Tool"] = "无限收益f3x建筑工具",
+    ["Fly V3"] = "飞行V3",
+    ["Like infyield Fly But Has Gui"] = "类似无限收益飞行但带有界面",
+    ["VFX Logger"] = "特效记录器",
+    ["VFX Logger Graber Player"] = "特效记录器获取器播放器",
+    ["Player"] = "玩家",
+    ["ServerHop"] = "切换服务器",
+    ["Change Server"] = "更换服务器",
+    ["Rejoin"] = "重新加入",
+    ["ReJoin Server"] = "重新加入服务器",
+    ["Reset"] = "重置",
+    ["Restart Your Characther"] = "重启你的角色",
+    ["Fix Cam"] = "修复相机",
+    ["Sets Your Camera To Normal"] = "将你的相机恢复正常",
+    ["Tools"] = "工具",
+    ["TP Tool"] = "传送工具",
+    ["Click to Teleport"] = "点击传送",
+    ["Jerk Off Tool"] = "自慰工具",
+    ["Susy Baka (Not By Me)"] = "Susy Baka（非我制作）",
+    ["Orbit Part"] = "部件环绕",
+    ["Part Orbit"] = "部件环绕",
+    ["Orbits all unanchors parts"] = "环绕所有未锚定的部件",
+    ["Radius"] = "半径",
+    ["radius of rotation around the parts"] = "部件环绕的旋转半径",
+    ["Height"] = "高度",
+    ["Height Settings"] = "高度设置",
+    ["Rotation Speed"] = "旋转速度",
+    ["Rotation Speed Power"] = "旋转速度强度",
+    ["Black Hole"] = "黑洞",
+    ["BlackHole"] = "黑洞",
+    ["Brings Unanchored Parts into One Place"] = "将未锚定部件聚集到一处",
+    ["Auto Follow BlackHole"] = "自动跟随黑洞",
+    ["BlackHole'u sürekli karakterin pozisyonuna ayarla"] = "将黑洞持续设置为角色的位置",
+    ["Update Location"] = "更新位置",
+    ["Sets BlackHole's location to where you is"] = "将黑洞位置设置为你的当前位置",
+    ["Players"] = "玩家",
+    ["Select Player"] = "选择玩家",
+    ["Enter Player Name To Select"] = "输入玩家名称以选择",
+    ["Input Here..."] = "在此输入...",
+    ["Teleport"] = "传送",
+    ["Teleport to Selected Player One Time"] = "单次传送到所选玩家",
+    ["Loop Teleport"] = "循环传送",
+    ["Loop Teleport To The Selected Person"] = "循环传送到所选玩家",
+    ["Fling"] = "抛射",
+    ["Fling The Selected Player One Time"] = "单次抛射所选玩家",
+    ["Loop Fling"] = "循环抛射",
+    ["Loop Fling Selected Player"] = "循环抛射所选玩家",
+    ["View Player"] = "查看玩家",
+    ["View Selected Player For 3 Seconds"] = "查看所选玩家3秒",
+    ["Loop View"] = "循环查看",
+    ["Keep Viewing Selected Player"] = "持续查看所选玩家",
+    ["AimLock Cam Player"] = "相机锁定玩家",
+    ["Lock Camera to Selected Player"] = "将相机锁定到所选玩家",
+    ["AimLock Character Player"] = "角色锁定玩家",
+    ["Lock Character to Selected Player"] = "将角色锁定到所选玩家",
+    ["Orbit Player"] = "环绕玩家",
+    ["Orbit Around Selected Player"] = "环绕所选玩家",
+    ["Notify On Death"] = "死亡通知",
+    ["Sends notification if the selected person dies"] = "所选玩家死亡时发送通知",
+    ["Fling Aura"] = "抛射光环",
+    ["Flings Person Within 10 Stud"] = "抛射10 Stud范围内的玩家",
+    ["Click Fling"] = "点击抛射",
+    ["Flings the Person You Clicked"] = "抛射你点击的玩家",
+    ["Fling All"] = "抛射全部",
+    ["Flings Everyone Loop"] = "循环抛射所有玩家",
+    ["Touch Fling"] = "触碰抛射",
+    ["Fling The Person You Touch"] = "抛射你触碰的玩家",
+    ["Anti Fling"] = "防抛射",
+    ["Other Exploiters Cant Fling You"] = "其他作弊者无法抛射你",
+    ["Costum Touch Fling Power"] = "自定义触碰抛射力度",
+    ["Fling Power Value"] = "抛射力度值",
+    ["Adjust the fling power"] = "调整抛射力度"
+}
+
+local function translateText(text)
+    if not text or type(text) ~= "string" then return text end
+    
+    if Translations[text] then
+        return Translations[text]
+    end
+    
+    for en, cn in pairs(Translations) do
+        if text:find(en) then
+            return text:gsub(en, cn)
+        end
+    end
+    
+    return text
+end
+
+local function setupTranslationEngine()
+    local success, err = pcall(function()
+        local oldIndex = getrawmetatable(game).__newindex
+        setreadonly(getrawmetatable(game), false)
+        
+        getrawmetatable(game).__newindex = newcclosure(function(t, k, v)
+            if (t:IsA("TextLabel") or t:IsA("TextButton") or t:IsA("TextBox")) and k == "Text" then
+                v = translateText(tostring(v))
+            end
+            return oldIndex(t, k, v)
+        end)
+        
+        setreadonly(getrawmetatable(game), true)
+    end)
+    
+    if not success then
+        warn("元表劫持失败:", err)
+       
+        local translated = {}
+        local function scanAndTranslate()
+            for _, gui in ipairs(game:GetService("CoreGui"):GetDescendants()) do
+                if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                    pcall(function()
+                        local text = gui.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                gui.Text = translatedText
+                                translated[gui] = true
+                            end
+                        end
+                    end)
+                end
+            end
+            
+            local player = game:GetService("Players").LocalPlayer
+            if player and player:FindFirstChild("PlayerGui") then
+                for _, gui in ipairs(player.PlayerGui:GetDescendants()) do
+                    if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                        pcall(function()
+                            local text = gui.Text
+                            if text and text ~= "" then
+                                local translatedText = translateText(text)
+                                if translatedText ~= text then
+                                    gui.Text = translatedText
+                                    translated[gui] = true
+                                end
+                            end
+                        end)
+                    end
+                end
+            end
+        end
+        
+        local function setupDescendantListener(parent)
+            parent.DescendantAdded:Connect(function(descendant)
+                if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+                    task.wait(0.1)
+                    pcall(function()
+                        local text = descendant.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                descendant.Text = translatedText
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+        
+        pcall(setupDescendantListener, game:GetService("CoreGui"))
+        local player = game:GetService("Players").LocalPlayer
+        if player and player:FindFirstChild("PlayerGui") then
+            pcall(setupDescendantListener, player.PlayerGui)
+        end
+        
+        while true do
+            scanAndTranslate()
+            task.wait(3)
+        end
+    end
+end
+
+task.wait(2)
+
+setupTranslationEngine()
+
+local success, err = pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
+
+
+end)
+
+if not success then
+    warn("加载失败:", err)
+end
