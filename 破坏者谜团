@@ -1,0 +1,252 @@
+local Translations = {
+    ["VexonHub"] = "VexonHub脚本",
+    ["Murder Mystery 2"] = "谋杀之谜2",
+    ["Search"] = "搜索",
+    ["Main"] = "主功能",
+    ["Misc"] = "其他功能",
+    ["ESP"] = "显示功能",
+    ["Farm"] = "挂机功能",
+    ["Animations"] = "动画功能",
+    ["Teleport"] = "传送功能",
+    ["Fling"] = "抛射功能",
+    ["Information"] = "信息功能",
+    ["Murder"] = "杀手功能",
+    ["Kill All (hold knife)"] = "击杀全部（手持小刀）",
+    ["Kill Sheriff (hold knife)"] = "击杀警长（手持小刀）",
+    ["Kill Innocents (hold knife)"] = "击杀无辜者（手持小刀）",
+    ["Hitboxes"] = "碰撞箱显示",
+    ["Hitbox size"] = "碰撞箱大小",
+    ["Hitbox color"] = "碰撞箱颜色",
+    ["Sheriff"] = "警长功能",
+    ["Shoot Murderer"] = "射击杀手",
+    ["AimBot Cam To Murder"] = "瞄准杀手视角",
+    ["Gun Aimbot (to murderer)"] = "枪械瞄准（针对杀手）",
+    ["Innocent"] = "无辜者功能",
+    ["invisibility"] = "隐身",
+    ["Auto Get Gun"] = "自动获取枪械",
+    ["Get Second Life (unstable)"] = "获取第二条命（不稳定）",
+    ["Fly"] = "飞行功能",
+    ["Fly Speed"] = "飞行速度",
+    ["Mobile Fly Panel"] = "移动端飞行面板",
+    ["Movement"] = "移动功能",
+    ["Speed (V Key On/Off)"] = "速度提升（V键开关）",
+    ["Speed Boost Value"] = "速度提升数值",
+    ["Jump"] = "跳跃增强",
+    ["Jump Boost Value"] = "跳跃增强数值",
+    ["Universal Scripts"] = "通用脚本",
+    ["Inf Yield"] = "无限收益",
+    ["Dex Explorer"] = "Dex资源管理器",
+    ["Remote Spy"] = "远程监听",
+    ["Keyboard"] = "键盘",
+    ["Anim Logger"] = "动画记录器",
+    ["f3x"] = "f3x建筑工具",
+    ["Fly V3"] = "飞行V3",
+    ["VFX Logger"] = "特效记录器",
+    ["Player"] = "玩家功能",
+    ["ServerHop"] = "服务器跳转",
+    ["Rejoin"] = "重新加入",
+    ["Reset"] = "重置",
+    ["Fixcam"] = "修复相机",
+    ["Tools"] = "工具功能",
+    ["Teleport Tool"] = "传送工具",
+    ["ESP Murderer"] = "显示杀手",
+    ["ESP Sheriff"] = "显示警长",
+    ["ESP Innocent"] = "显示无辜者",
+    ["Gun ESP"] = "显示枪械",
+    ["Expose Roles"] = "暴露身份",
+    ["Expose Murderer"] = "暴露杀手",
+    ["Expose Sheriff"] = "暴露警长",
+    ["Auto Expose Murderer"] = "自动暴露杀手",
+    ["Auto Expose Sheriff"] = "自动暴露警长",
+    ["Notify"] = "通知",
+    ["Notify Murderer"] = "通知杀手",
+    ["Notify Sheriff"] = "通知警长",
+    ["Auto Notify Murderer"] = "自动通知杀手",
+    ["Auto Notify Sheriff"] = "自动通知警长",
+    ["Spectate"] = "观战功能",
+    ["Spectate Murderer"] = "观战杀手",
+    ["Spectate Sheriff"] = "观战警长",
+    ["Spectate Random"] = "随机观战",
+    ["Stop Spectating"] = "停止观战",
+    ["Coin Farm"] = "金币挂机",
+    ["Auto Farm Coin"] = "自动挂机金币",
+    ["Teleport + Walk"] = "传送+移动",
+    ["Coin Farm Mode"] = "金币挂机模式",
+    ["Ana hedef coin'i nasıl seçeceğini belirle"] = "设置如何选择目标金币",
+    ["Nearest"] = "最近",
+    ["Teleport Interval"] = "传送间隔",
+    ["Spin (spin for getting coins easily)"] = "旋转（轻松获取金币）",
+    ["Anti-AFK"] = "防挂机检测",
+    ["Animation Packs"] = "动画包",
+    ["Vampire"] = "吸血鬼",
+    ["Hero"] = "英雄",
+    ["ZombieClassic"] = "经典僵尸",
+    ["Mage"] = "法师",
+    ["Ghost"] = "幽灵",
+    ["Elder"] = "长老",
+    ["Levitation"] = "悬浮",
+    ["Astronaut"] = "宇航员",
+    ["Ninja"] = "忍者",
+    ["Werewolf"] = "狼人",
+    ["Cartoon"] = "卡通",
+    ["Pirate"] = "海盗",
+    ["Sneaky"] = "潜行",
+    ["Toy"] = "玩具",
+    ["Knight"] = "骑士",
+    ["Confident"] = "自信",
+    ["Popstar"] = "流行明星",
+    ["Princess"] = "公主",
+    ["Cowboy"] = "牛仔",
+    ["Patrol"] = "巡逻",
+    ["Zombie FE"] = "FE僵尸",
+    ["Teleport To Sheriff"] = "传送到警长",
+    ["Teleport To Murderer"] = "传送到杀手",
+    ["Loop Teleport Everyone"] = "循环传送所有人",
+    ["Teleport To Lobby"] = "传送到大厅",
+    ["Teleport To Map"] = "传送到地图 ",
+    ["Fling Sheriff"] = "抛射警长",
+    ["Fling Murderer"] = "抛射杀手",
+    ["Fix fling teleport bug"] = "修复抛射传送 bug",
+    ["Player Selection"] = "玩家选择",
+    ["Select Player"] = "选择玩家",
+    ["Enter Player Name To Select Target"] = "输入玩家名称以选择目标",
+    ["PlayerName"] = "玩家名称",
+    ["Player Actions"] = "玩家操作",
+    ["Teleport to Player"] = "传送到玩家",
+    ["Loop Teleport"] = "循环传送",
+    ["Fling Player"] = "抛射玩家",
+    ["Loop Fling"] = "循环抛射",
+    ["View Player (3 sec)"] = "查看玩家（3秒）",
+    ["Loop View"] = "循环查看",
+    ["AimLock (Camera)"] = "镜头瞄准锁定",
+    ["AimLock (Character)"] = "角色瞄准锁定",
+    ["Orbit Player"] = "环绕玩家",
+    ["Notify On Death"] = "死亡时通知",
+    ["Fling Aura"] = "抛射光环",
+    ["Click Fling"] = "点击抛射",
+    ["Fling All (Buggy?)"] = "抛射全部（存在BUG？）",
+    ["Touch Fling"] = "触碰抛射",
+    ["Anti Fling"] = "防抛射",
+    ["Costum Touch Fling Power"] = "自定义触碰抛射力度",
+    ["Fling Power Value"] = "抛射力度数值",
+    ["VexonHub Reborn"] = "VexonHub重生版",
+    ["Member Count"] = "成员数量",
+    ["Online Count"] = "在线数量",
+    ["Update Info"] = "更新信息",
+    ["Copy Discord Invite"] = "复制Discord邀请链接"
+}
+
+local function translateText(text)
+    if not text or type(text) ~= "string" then return text end
+    
+    if Translations[text] then
+        return Translations[text]
+    end
+    
+    for en, cn in pairs(Translations) do
+        if text:find(en) then
+            return text:gsub(en, cn)
+        end
+    end
+    
+    return text
+end
+
+local function setupTranslationEngine()
+    local success, err = pcall(function()
+        local oldIndex = getrawmetatable(game).__newindex
+        setreadonly(getrawmetatable(game), false)
+        
+        getrawmetatable(game).__newindex = newcclosure(function(t, k, v)
+            if (t:IsA("TextLabel") or t:IsA("TextButton") or t:IsA("TextBox")) and k == "Text" then
+                v = translateText(tostring(v))
+            end
+            return oldIndex(t, k, v)
+        end)
+        
+        setreadonly(getrawmetatable(game), true)
+    end)
+    
+    if not success then
+        warn("元表劫持失败:", err)
+       
+        local translated = {}
+        local function scanAndTranslate()
+            for _, gui in ipairs(game:GetService("CoreGui"):GetDescendants()) do
+                if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                    pcall(function()
+                        local text = gui.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                gui.Text = translatedText
+                                translated[gui] = true
+                            end
+                        end
+                    end)
+                end
+            end
+            
+            local player = game:GetService("Players").LocalPlayer
+            if player and player:FindFirstChild("PlayerGui") then
+                for _, gui in ipairs(player.PlayerGui:GetDescendants()) do
+                    if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                        pcall(function()
+                            local text = gui.Text
+                            if text and text ~= "" then
+                                local translatedText = translateText(text)
+                                if translatedText ~= text then
+                                    gui.Text = translatedText
+                                    translated[gui] = true
+                                end
+                            end
+                        end)
+                    end
+                end
+            end
+        end
+        
+        local function setupDescendantListener(parent)
+            parent.DescendantAdded:Connect(function(descendant)
+                if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+                    task.wait(0.1)
+                    pcall(function()
+                        local text = descendant.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                descendant.Text = translatedText
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+        
+        pcall(setupDescendantListener, game:GetService("CoreGui"))
+        local player = game:GetService("Players").LocalPlayer
+        if player and player:FindFirstChild("PlayerGui") then
+            pcall(setupDescendantListener, player.PlayerGui)
+        end
+        
+        while true do
+            scanAndTranslate()
+            task.wait(3)
+        end
+    end
+end
+
+task.wait(2)
+
+setupTranslationEngine()
+
+local success, err = pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
+
+
+
+end)
+
+if not success then
+    warn("加载失败:", err)
+end
