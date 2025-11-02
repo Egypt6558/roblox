@@ -103,7 +103,7 @@ local Translations = {
     ["Teleport To Murderer"] = "传送到杀手",
     ["Loop Teleport Everyone"] = "循环传送所有人",
     ["Teleport To Lobby"] = "传送到大厅",
-    ["Teleport To Map"] = "传送到地图 ",
+    ["Teleport To Map"] = "传送到地图",
     ["Fling Sheriff"] = "抛射警长",
     ["Fling Murderer"] = "抛射杀手",
     ["Fix fling teleport bug"] = "修复抛射传送 bug",
@@ -244,9 +244,8 @@ local success, err = pcall(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
 
 
-
 end)
 
 if not success then
     warn("加载失败:", err)
-end<
+end
