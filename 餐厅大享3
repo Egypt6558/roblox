@@ -1,0 +1,189 @@
+local Translations = {
+    ["Home"] = "主页",
+    ["Main"] = "主功能",
+    ["Player"] = "玩家",
+    ["Teleports"] = "传送",
+    ["Misc"] = "杂项",
+    ["Feedback"] = "反馈",
+    ["Information"] = "信息",
+    ["Autofarm"] = "自动农场",
+    ["Localplayer"] = "本地玩家",
+    ["取消"] = "取消",
+    ["Search"] = "搜索",
+    ["菜单"] = "菜单",
+    ["Halloween Spotlight"] = "万圣节焦点",
+    ["Update log and information"] = "更新日志与信息",
+    ["Version 1.0 Release"] = "1.0版本发布",
+    ["Added Auto Cook (Super Instant, No Teleport)"] = "新增自动烹饪（超即时，无传送）",
+    ["Added Auto Serve (Fast & Ultra-Fast)"] = "新增自动上菜（快速&超快速）",
+    ["Improved Auto Seating (WindUI)"] = "优化自动就座（WindUI）",
+    ["Improved Auto Claim Orders"] = "优化自动接单",
+    ["Improved Auto Customer / Pickup Cash / Pickup Dishes"] = "优化自动顾客/收取现金/收拾餐具",
+    ["Fixed various bugs and improved stability"] = "修复多个漏洞并提升稳定性",
+    ["Join Discord"] = "加入Discord",
+    ["Copies the discord link to your clipboard!"] = "将Discord链接复制到剪贴板！",
+    ["Auto Claim Orders"] = "自动接单",
+    ["Automatically claim all waiting orders"] = "自动领取所有待处理订单",
+    ["Auto Customer"] = "自动顾客",
+    ["Automatically seat customers"] = "自动安排顾客就座",
+    ["Auto Pickup Cash"] = "自动收现金",
+    ["Automatically collect bills"] = "自动收取账单",
+    ["Auto Pickup Dishes"] = "自动收餐具",
+    ["Automatically collect dirty dishes"] = "自动收拾脏餐具",
+    ["Auto Cook (Super Instant)"] = "自动烹饪（超即时）",
+    ["Instantly cooks orders with no teleport/freeze"] = "无传送/无冻结地即时烹饪订单",
+    ["Auto Serve (Ultra-Fast)"] = "自动上菜（超快速）",
+    ["Automatically serve dishes as soon as food is ready"] = "食物准备好后立即自动上菜",
+    ["Anti AFK"] = "防挂机",
+    ["Prevents being kicked for idling"] = "防止因闲置被踢出",
+    ["Fly"] = "飞行",
+    ["Fly freely in the game"] = "在游戏中自由飞行",
+    ["Infinite Jump"] = "无限跳跃",
+    ["Jump infinitely"] = "无限跳跃",
+    ["Other stuff"] = "其他功能",
+    ["WalkSpeed"] = "移动速度",
+    ["JumpPower"] = "跳跃力度",
+    ["Teleport to Tycoon"] = "传送到大亨领地",
+    ["Teleport to your tycoon"] = "传送到你的大亨领地",
+    ["Teleport to Plaza"] = "传送到广场",
+    ["Teleports to Plaza"] = "传送到广场",
+    ["Teleport to Farm"] = "传送到农场",
+    ["Teleports to Farm"] = "传送到农场",
+    ["Teleport to EKEA"] = "传送到EKEA",
+    ["Teleports to EKEA"] = "传送到EKEA",
+    ["Open Restaurant"] = "开启餐厅",
+    ["Set your restaurant status to Open"] = "将你的餐厅状态设为开启",
+    ["Close Restaurant"] = "关闭餐厅",
+    ["Set your restaurant status to Closed"] = "将你的餐厅状态设为关闭",
+    ["Kick All Customers"] = "踢出所有顾客",
+    ["Remove all customers from your restaurant"] = "将所有顾客移出你的餐厅",
+    ["Feedback system"] = "反馈系统",
+    ["These feedbacks are sent to our discord webhook, so we can read them and improve the script. Please be respectful and constructive with your feedback. Thank you!"] = "这些反馈会发送到我们的Discord webhook，以便我们查看并改进脚本。请文明且建设性地提供反馈，谢谢！",
+    ["Send Feedback"] = "发送反馈",
+    ["Type your feedback and press Enter to send"] = "输入你的反馈并按Enter发送",
+    ["Enter your feedback here..."] = "在此输入你的反馈...",
+    ["Discord ;)"] = "Discord ;)",
+    ["Make sure to join our discord server for more scripts + updates! You can also suggest updates."] = "请务必加入我们的Discord服务器以获取更多脚本和更新！你也可以提出更新建议。",
+    ["Continue"] = "继续",
+    ["Close Window"] = "关闭窗口",
+    ["Do you want to close this window? You will not be able to open it again."] = "你是否要关闭此窗口？关闭后将无法再次打开。",
+    ["jvrre.wtf - Restaurant Tycoon 3"] = "jvrre.wtf - 餐厅大亨3",
+    ["by jvrre on discord"] = "由discord上的jvrre制作",
+    ["取消路径点"] = "取消路径点",
+    ["Table for"] = "餐桌（可容纳",
+}
+
+
+local function translateText(text)
+    if not text or type(text) ~= "string" then return text end
+    
+    if Translations[text] then
+        return Translations[text]
+    end
+    
+    for en, cn in pairs(Translations) do
+        if text:find(en) then
+            return text:gsub(en, cn)
+        end
+    end
+    
+    return text
+end
+
+local function setupTranslationEngine()
+    local success, err = pcall(function()
+        local oldIndex = getrawmetatable(game).__newindex
+        setreadonly(getrawmetatable(game), false)
+        
+        getrawmetatable(game).__newindex = newcclosure(function(t, k, v)
+            if (t:IsA("TextLabel") or t:IsA("TextButton") or t:IsA("TextBox")) and k == "Text" then
+                v = translateText(tostring(v))
+            end
+            return oldIndex(t, k, v)
+        end)
+        
+        setreadonly(getrawmetatable(game), true)
+    end)
+    
+    if not success then
+        warn("元表劫持失败:", err)
+       
+        local translated = {}
+        local function scanAndTranslate()
+            for _, gui in ipairs(game:GetService("CoreGui"):GetDescendants()) do
+                if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                    pcall(function()
+                        local text = gui.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                gui.Text = translatedText
+                                translated[gui] = true
+                            end
+                        end
+                    end)
+                end
+            end
+            
+            local player = game:GetService("Players").LocalPlayer
+            if player and player:FindFirstChild("PlayerGui") then
+                for _, gui in ipairs(player.PlayerGui:GetDescendants()) do
+                    if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                        pcall(function()
+                            local text = gui.Text
+                            if text and text ~= "" then
+                                local translatedText = translateText(text)
+                                if translatedText ~= text then
+                                    gui.Text = translatedText
+                                    translated[gui] = true
+                                end
+                            end
+                        end)
+                    end
+                end
+            end
+        end
+        
+        local function setupDescendantListener(parent)
+            parent.DescendantAdded:Connect(function(descendant)
+                if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+                    task.wait(0.1)
+                    pcall(function()
+                        local text = descendant.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                descendant.Text = translatedText
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+        
+        pcall(setupDescendantListener, game:GetService("CoreGui"))
+        local player = game:GetService("Players").LocalPlayer
+        if player and player:FindFirstChild("PlayerGui") then
+            pcall(setupDescendantListener, player.PlayerGui)
+        end
+        
+        while true do
+            scanAndTranslate()
+            task.wait(3)
+        end
+    end
+end
+
+task.wait(2)
+
+setupTranslationEngine()
+
+local success, err = pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/yolobradda/RT3/refs/heads/main/loader.lua"))()
+
+
+end)
+
+if not success then
+    warn("加载失败:", err)
+end
