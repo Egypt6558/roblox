@@ -7,10 +7,8 @@ local Translations = {
     ["Feedback"] = "反馈",
     ["Information"] = "信息",
     ["Autofarm"] = "自动农场",
-    ["Localplayer"] = "本地玩家",
-    ["取消"] = "取消",
+    ["Localplayer"] = "本地玩家"，
     ["Search"] = "搜索",
-    ["菜单"] = "菜单",
     ["Halloween Spotlight"] = "万圣节焦点",
     ["Update log and information"] = "更新日志与信息",
     ["Version 1.0 Release"] = "1.0版本发布",
@@ -69,7 +67,6 @@ local Translations = {
     ["Do you want to close this window? You will not be able to open it again."] = "你是否要关闭此窗口？关闭后将无法再次打开。",
     ["jvrre.wtf - Restaurant Tycoon 3"] = "jvrre.wtf - 餐厅大亨3",
     ["by jvrre on discord"] = "由discord上的jvrre制作",
-    ["取消路径点"] = "取消路径点",
     ["Table for"] = "餐桌（可容纳",
 }
 
