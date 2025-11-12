@@ -1,0 +1,442 @@
+local Translations = {
+    ["DAY FARM V1 + INFINITE SAPLINGS"] = "每日农场 V1 + 无限树苗",
+    ["New Patch Note!"] = "新补丁说明！",
+    ["A new patch note is available! Open the changelog?"] = "有新的补丁说明可用！要打开更新日志吗？",
+    ["Memt"] = "内存",
+    ["Online"] = "在线",
+    ["Update Discord Info"] = "更新Discord信息",
+    ["UI Key"] = "界面快捷键",
+    ["Show UI by pressing key"] = "通过按键显示界面",
+    ["Join Discord Server"] = "加入Discord服务器",
+    ["Yes"] = "是",
+    ["No"] = "否",
+    ["Make sure to join our discord"] = "请务必加入我们的Discord",
+    ["Welcome to Void Translator!"] = "欢迎使用虚空汉化！",
+    ["Make sure to join our discord server for updates!"] = "请务必加入我们的Discord服务器以获取更新！",
+    ["Uninstall GUI"] = "卸载图形界面",
+    ["Language Select"] = "语言选择",
+    ["en"] = "QQ群183441213",
+    ["Landscape Select"] = "山河画选择",
+    ["Wind"] = "风",
+    ["Sprint"] = "冲刺",
+    ["Show Map"] = "显示地图",
+    ["Loops you in circle around the map to let everything load"] = "让你在地图上循环绕圈以便加载所有内容",
+    ["Must upgrade the fire constantly or the map won't load!"] = "必须不断升级火焰，否则地图无法加载！",
+    ["Farm All Trees"] = "作业所有树",
+    ["Patched"] = "已修复",
+    ["Farm All Big Trees"] = "作业所有大树",
+    ["Farm All Chests"] = "作业所有宝箱",
+    ["Farm All Orbs [Beta]"] = "作业所有小球【测试版】",
+    ["Farm Entities"] = "作业实体",
+    ["Craft Items"] = "制作物品",
+    ["Teleport All Children [Beta]"] = "传送所有小孩【测试版】",
+    ["Teleport Entities"] = "传送实体",
+    ["Teleport"] = "传送",
+    ["Cultist"] = "教徒",
+    ["Free mounosort"] = "自由排序",
+    ["Crossbow Cultist"] = "十字弓教徒",
+    ["Cultist Leader"] = "教徒头目",
+    ["Alpha Wolf"] = "阿尔法狼",
+    ["Alien"] = "外星人",
+    ["Alien Elite"] = "外星精英",
+    ["Cultist King"] = "教徒国王",
+    ["Meteor Crab"] = "流星蟹",
+    ["Polar Bear"] = "北极熊",
+    ["Arctic Fox"] = "北极狐",
+    ["Collect All Flowers"] = "抽取所有花朵",
+    ["Collection Order"] = "收集序",
+    ["Sapling"] = "树苗",
+    ["Feather"] = "羽毛",
+    ["Log"] = "木头",
+    ["Chair"] = "椅子",
+    ["Coal"] = "煤炭",
+    ["Fuel Canister"] = "燃料罐",
+    ["Oil Barrel"] = "油桶",
+    ["Auto Pickup"] = "自动拾取",
+    ["Biofuel"] = "生物燃料",
+    ["Function Search"] = "功能搜索",
+    ["Information"] = "信息",
+    ["Entertainment"] = "娱乐",
+    ["Auto"] = "自动",
+    ["Auto Find Children"] = "自动寻找孩子们",
+    ["Item Collection"] = "物品收集",
+    ["Main Functions"] = "主要功能",
+    ["Operation Position"] = "操作位置",
+    ["View"] = "查看",
+    ["Login"] = "登录",
+    ["Workbench"] = "工作台",
+    ["View..."] = "查看...",
+    ["Enable"] = "启用",
+    ["Plant & Build Stuff"] = "种植与建造物品",
+    ["Plant/Build Radius"] = "种植/建造半径",
+    ["Angle Increment"] = "角度增量",
+    ["Plant Height"] = "种植高度",
+    ["Plant/Build Limit"] = "种植/建造限制",
+    ["Show Blueprint"] = "显示蓝图",
+    ["Placement Method"] = "放置方法",
+    ["Circle"] = "圆形",
+    ["Plant Saplings"] = "种植树苗",
+    ["Building Graphics Terms"] = "建筑图形术语",
+    ["Custom Fixed Position [Beta]"] = "自选定格 [测试版]",
+    ["Carry Position"] = "携带位置",
+    ["Player"] = "玩家",
+    ["View Mode"] = "查看模式",
+    ["Safe"] = "安全",
+    ["Simple"] = "简单",
+    ["Auto Find Children Status"] = "自动寻找孩子们状态",
+    ["Find Children"] = "寻找孩子们",
+    ["Stop Find Task"] = "停止寻找任务",
+    ["Gift World"] = "礼物世界",
+    ["Operation"] = "操作",
+    ["Edit"] = "编辑",
+    ["Please set"] = "请将设置",
+    ["Use free view to select items"] = "使用自由视角选择物品",
+    ["Untouchable by others"] = "其他玩家不可触碰",
+    ["Makes the brought items untouchable by other players"] = "使携带的物品其他玩家无法触碰",
+    ["Carry Method"] = "携带方式",
+    ["Ultra Fast"] = "超快",
+    ["Slow"] = "慢速",
+    ["Fast"] = "快速",
+    ["Single Item"] = "单物",
+    ["Operation Panel"] = "操作面板",
+    ["Editor"] = "编辑器",
+    ["Please set according to"] = "请根据设置",
+    ["Please delete"] = "请删除",
+    ["New Selection"] = "新建选择",
+    ["Crossbow..."] = "十字弓...",
+    ["Add"] = "添加",
+    ["All"] = "全部",
+    ["Left Menu Bar"] = "左侧菜单栏",
+    ["Brian"] = "布莱恩",
+    ["Items Choice"] = "物品选择",
+    ["Raw Obsidiron Ore"] = "原生黑曜铁矿",
+    ["Gold Shard"] = "金碎片",
+    ["Meteor Shard"] = "流星碎片",
+    ["Scalding Obsidiron Ingot"] = "灼热黑曜铁锭",
+    ["Sort Settings"] = "排序设置",
+    ["Sort Button"] = "排序按钮",
+    ["Bring Meteor Items"] = "携带流星物品",
+    ["Bring Food"] = "携带食物",
+    ["Bring Health"] = "携带生命值",
+    ["Sort Button [Test Frame]"] = "排序按钮 [测试框]",
+    ["Script Master"] = "脚本大师",
+    ["Script Great God"] = "脚本大神",
+    ["Basic Scroll"] = "基本大卷",
+    ["Star Product"] = "星号出品",
+    ["Snow Mountain"] = "雪地山岳",
+    ["Carry Count"] = "携带数",
+    ["Iron Material"] = "铁料",
+    ["Nuclear Material"] = "核料",
+    ["Bolt_Tyre..."] = "螺栓_轮胎...",
+    ["Bott_Tyre..."] = "螺栓_轮胎...",
+    ["Bott. Tvre..."] = "螺栓_轮胎...",
+    ["Bolt. Tvre..."] = "螺栓_轮胎...",
+    ["Laser Sword"] = "激光剑",
+    ["Raygun"] = "射线枪",
+    ["Ice Axe"] = "冰斧",
+    ["Ice Sword"] = "冰剑",
+    ["Chainsaw"] = "链锯",
+    ["Strong Axe"] = "强力斧",
+    ["Axe Trim Kit"] = "斧头改装套件",
+    ["Spear"] = "长矛",
+    ["Good Axe"] = "优质斧",
+    ["Revolver"] = "左轮手枪",
+    ["Rifle"] = "步枪",
+    ["Tactical Shotgun"] = "战术霰弹枪",
+    ["Revolver Ammo"] = "左轮手枪弹药",
+    ["Rifle Ammo"] = "步枪弹药",
+    ["Alien Armour"] = "外星护甲",
+    ["Thorn Body"] = "荆棘身体",
+    ["Riot Shield"] = "防暴盾牌",
+    ["Gun"] = "枪支",
+    ["Frog Boots"] = "青蛙靴",
+    ["Armour Trim Kit"] = "护甲改装套件",
+    ["Obsidiron Boots"] = "黑曜铁靴",
+    ["Operation Bar"] = "操作栏",
+    ["Hot Sale Fast"] = "热销快",
+    ["Hot Sale Fast Support Sprint"] = "热销快支持冲刺",
+    ["Halloween Candle"] = "万圣节蜡烛",
+    ["Candy"] = "糖果",
+    ["Frog Key"] = "青蛙钥匙",
+    ["Feather"] = "羽毛",
+    ["Carry Fast"] = "携带快",
+    ["Carry Guns & Armor"] = "携带枪支与护甲",
+    ["Internal Sack"] = "内部袋",
+    ["Giant Sack"] = "巨型袋",
+    ["Good Sack"] = "优质袋",
+    ["Seed Box"] = "种子盒",
+    ["Stop Tool"] = "停具",
+    ["Bullet Screen"] = "弹幕",
+    ["Alien Smell"] = "异臭",
+    ["Drag"] = "拖拉",
+    ["Backpack"] = "背蛙",
+    ["Carry"] = "携带",
+    ["Wonderful Product"] = "奇妙仙品",
+    ["Gem of the Forest Fragment"] = "森林宝石碎片",
+    ["Diamond"] = "钻石",
+    ["Defense Blueprint"] = "防御蓝图",
+    ["Infinite Saplings"] = "无限树苗",
+    ["Infinite Saplings Exploit!"] = "无限树苗漏洞利用！",
+    ["Spam Plant"] = "垃圾种植",
+    ["Restart Exploit"] = "重启漏洞利用",
+    ["This fixes most bugs in case the inf saplings bugs out -D"] = "如果无限树苗出现错误，这可以修复大多数漏洞 -D",
+    ["Other Lock Mode"] = "其他上锁模式",
+    ["Aura"] = "光环",
+    ["Maximum Permission"] = "最大权限",
+    ["Entity Belt Mode"] = "实体上带模式",
+    ["Become Invincible"] = "变得无敌",
+    ["Makes you unbitable by other entities You also can't die from hunger"] = "让你不被其他实体咬伤，你也不会因饥饿而死",
+    ["Back Height Adjuster"] = "背部高度调整器",
+    ["Maximum Range"] = "最大校场",
+    ["Kill Aura"] = "杀死光环",
+    ["Frost Aura"] = "冰霜光环",
+    ["Ore Aura"] = "矿石光环",
+    ["Range Circle"] = "范围圆圈",
+    ["RangeCircle Color"] = "RangeCircle颜色",
+    ["Killaura Targets"] = "光环目标",
+    ["Frog King..."] = "青蛙King...",
+    ["Clear King..."] = "清益King...",
+    ["Aura Range"] = "光环范围",
+    ["Require Hand Check"] = "需要手持检查",
+    ["If disabled, it will let all Auras to work without you holding any tool"] = "如果禁用，所有光环将在你不持有任何工具时工作",
+    ["Auto TP to Targets"] = "自动传送至目标",
+    ["Automatically teleports to targets when they are out of range (200 Studs)."] = "当目标超出范围（200 Studs）时自动传送至目标。",
+    ["This is because the 99 Nights devs patched higher range :c"] = "这是因为99夜开发者修复了更高范围 :c",
+    ["Small Tree"] = "小树",
+    ["Dead Tree"] = "枯树",
+    ["Big Tree"] = "大树",
+    ["Snowy Small Tree"] = "雪地小树",
+    ["Small Webbed Tree"] = "小型蛛网树",
+    ["Auto Supply Assistant"] = "自动补给助言",
+    ["Chop Seconds"] = "砍伐秒",
+    ["Swordfish"] = "剑鱼",
+    ["Auto Plant Saplings"] = "自动种植树苗",
+    ["Chop Sand"] = "砍伐沙",
+    ["Auto Experience Wealth"] = "自动体验财富",
+    ["Chop Dream"] = "砍伐梦",
+    ["Update Focused"] = "更新焦点",
+    ["Performance"] = "性能",
+    ["Wallhack"] = "透视",
+    ["Lens"] = "透镜",
+    ["Candy Farm"] = "糖果农场",
+    ["The most op candy farm ever !!"] = "有史以来最强的糖果农场！！",
+    ["Infinite Candy"] = "无限糖果",
+    ["Server Hop"] = "服务器跳转",
+    ["Use this to get as much candy as possible from different games as fast as possible !!"] = "使用此功能尽可能快地从不同游戏中获取尽可能多的糖果！！",
+    ["Maze"] = "迷宫",
+    ["TP to end"] = "传送至终点",
+    ["Halloween"] = "万圣节",
+    ["Equip Vampire Class"] = "装备吸血鬼职业",
+    ["Bring Pumpkins"] = "携带南瓜",
+    ["Bring Candles"] = "携带蜡烛",
+    ["Open All Chests via Auto Chest"] = "通过自动宝箱打开所有宝箱",
+    ["By opening all chests you have a bigger chance of bringing a lot of halloween candles"] = "通过打开所有宝箱，你有更大机会携带大量万圣节蜡烛",
+    ["Halloween House TP"] = "万圣节房屋传送",
+    ["chance of bringing a lot of halloween candies"] = "有机会携带大量万圣节糖果",
+    ["Halloween House Choice"] = "万圣节房屋选择",
+    ["Teleport to Halloween House"] = "传送至万圣节房屋",
+    ["Refresh Halloween House List"] = "刷新万圣节房屋列表",
+    ["Halloween House Cultist"] = "万圣节房屋教徒",
+    ["Halloween House Vampire"] = "万圣节房屋吸血鬼",
+    ["Halloween House Crossbow Cultist"] = "万圣节房屋十字弓教徒",
+    ["Taming"] = "驯服",
+    ["Equip Zookeeper class"] = "装备动物园管理员职业",
+    ["Bring Carrots"] = "携带胡萝卜",
+    ["Bring Steak"] = "携带牛排",
+    ["100% Taming Success Rate"] = "100% 驯服成功率",
+    ["Instant Taming Minigame"] = "即时驯服小游戏",
+    ["Low Temperature"] = "低温度",
+    ["Cleanup Big Trees"] = "清理大树",
+    ["Cleanup Logs"] = "清理木头",
+    ["This deletes ALL logs from the map PERMANENTLY!"] = "这会永久删除地图上所有的木头！",
+    ["Select Child"] = "选择孩子",
+    ["Teleport To Child"] = "传送至孩子",
+    ["Bank"] = "银行",
+    ["Fishing Hut"] = "钓鱼小屋",
+    ["Cultist Generator Base"] = "教徒发电机基地",
+    ["Volcano"] = "火山",
+    ["King Statue"] = "国王雕像",
+    ["Alien Mothership"] = "外星母舰",
+    ["Alien Crash Active"] = "外星坠毁点_激活",
+    ["Military Base"] = "军事基地",
+    ["Snow Clothing Shop"] = "雪地服装店",
+    ["Testing Facility"] = "测试设施",
+    ["Tool Workshop"] = "工具工坊",
+    ["Fairy House"] = "精灵房屋",
+    ["View Product"] = "查看出品",
+    ["Snow Mountain Range"] = "雪地山脉",
+    ["Script Gang"] = "脚本大帮",
+    ["Fishing"] = "钓鱼",
+    ["Select Base"] = "选择基于",
+    ["Dimokid"] = "迪莫孩子",
+    ["Virtual Teleport"] = "虚拟传",
+    ["Kcalakid"] = "卡卡拉孩子",
+    ["Sek"] = "塞克",
+    ["Krakenkid"] = "克拉肯孩子",
+    ["Squidkid"] = "鱿鱼孩子",
+    ["Other Teleport"] = "其他传",
+    ["Sukur"] = "苏库尔",
+    ["Squldkid"] = "斯奎德孩子",
+    ["Teleport to Key Location"] = "传送至要地",
+    ["SAPARETTE LADUISEN"] = "分离半径",
+    ["Rich Color Shader"] = "丰富者色器",
+    ["Shader Black"] = "着色器黑色",
+    ["Optical Disc"] = "光碟",
+    ["Purple"] = "紫色",
+    ["Galaxy"] = "银河",
+    ["Polyline"] = "折线",
+    ["BetterNight"] = "更好的夜晚",
+    ["Anti-Robbery"] = "防劫",
+    ["BetterNight2"] = "更好的夜晚2",
+    ["Anti-Robbery Great Emperor"] = "防劫大帝",
+    ["MagentaOrange"] = "紫红色橙色",
+    ["Attacker"] = "攻击者",
+    ["Target Food"] = "目标食物",
+    ["Food Choice"] = "食物选择",
+    ["Orange"] = "橙色",
+    ["Show Range"] = "显示范围",
+    ["Square"] = "方形",
+    ["One Place"] = "一个位置",
+    ["Carry Fuel [Test Board]"] = "携带燃料 [测试板]",
+    ["Bring Healing"] = "携带治疗",
+    ["Healing"] = "治疗",
+    ["Bring Iron"] = "携带铁",
+    ["Helloing"] = "问候",
+    ["Bring Headline"] = "携带头条",
+    ["Back to Back"] = "背靠背",
+    ["Broken Fan"] = "坏风扇",
+    ["Broken Microwave"] = "坏微波炉",
+    ["Washing Machine"] = "洗衣机",
+    ["Old Car Engine"] = "旧汽车引擎",
+    ["Hearing"] = "听力",
+    ["UFO Component"] = "UFO组件",
+    ["UFO Junk"] = "UFO垃圾",
+    ["Internal Sword"] = "内部剑",
+    ["Morningstar"] = "晨星",
+    ["Crossbow"] = "十字弓",
+    ["Internal Crossbow"] = "内部十字弓",
+    ["Variable Change"] = "改变量",
+    ["Void Destruction"] = "虚空灭亡",
+    ["Automatic"] = "自动",
+    ["Carry Flow Items"] = "携带流量物品",
+    ["Menu Bar"] = "菜单栏",
+    ["Strange Product"] = "奇号出品",
+    ["Stop Shake"] = "停晃",
+    ["Stop Dance"] = "停舞",
+    ["雷电出品"] = "菜鸟出品"
+}
+
+
+local function translateText(text)
+    if not text or type(text) ~= "string" then return text end
+    
+    if Translations[text] then
+        return Translations[text]
+    end
+    
+    for en, cn in pairs(Translations) do
+        if text:find(en) then
+            return text:gsub(en, cn)
+        end
+    end
+    
+    return text
+end
+
+local function setupTranslationEngine()
+    local success, err = pcall(function()
+        local oldIndex = getrawmetatable(game).__newindex
+        setreadonly(getrawmetatable(game), false)
+        
+        getrawmetatable(game).__newindex = newcclosure(function(t, k, v)
+            if (t:IsA("TextLabel") or t:IsA("TextButton") or t:IsA("TextBox")) and k == "Text" then
+                v = translateText(tostring(v))
+            end
+            return oldIndex(t, k, v)
+        end)
+        
+        setreadonly(getrawmetatable(game), true)
+    end)
+    
+    if not success then
+        warn("元表劫持失败:", err)
+       
+        local translated = {}
+        local function scanAndTranslate()
+            for _, gui in ipairs(game:GetService("CoreGui"):GetDescendants()) do
+                if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                    pcall(function()
+                        local text = gui.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                gui.Text = translatedText
+                                translated[gui] = true
+                            end
+                        end
+                    end)
+                end
+            end
+            
+            local player = game:GetService("Players").LocalPlayer
+            if player and player:FindFirstChild("PlayerGui") then
+                for _, gui in ipairs(player.PlayerGui:GetDescendants()) do
+                    if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                        pcall(function()
+                            local text = gui.Text
+                            if text and text ~= "" then
+                                local translatedText = translateText(text)
+                                if translatedText ~= text then
+                                    gui.Text = translatedText
+                                    translated[gui] = true
+                                end
+                            end
+                        end)
+                    end
+                end
+            end
+        end
+        
+        local function setupDescendantListener(parent)
+            parent.DescendantAdded:Connect(function(descendant)
+                if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+                    task.wait(0.1)
+                    pcall(function()
+                        local text = descendant.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                descendant.Text = translatedText
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+        
+        pcall(setupDescendantListener, game:GetService("CoreGui"))
+        local player = game:GetService("Players").LocalPlayer
+        if player and player:FindFirstChild("PlayerGui") then
+            pcall(setupDescendantListener, player.PlayerGui)
+        end
+        
+        while true do
+            scanAndTranslate()
+            task.wait(3)
+        end
+    end
+end
+
+task.wait(2)
+
+setupTranslationEngine()
+
+local success, err = pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/atnew2025/Chinese-scripts/refs/heads/main/voidware-cn.txt"))()
+
+
+end)
+
+if not success then
+    warn("加载失败:", err)
+end
