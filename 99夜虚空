@@ -320,7 +320,7 @@ local Translations = {
     ["Strange Product"] = "奇号出品",
     ["Stop Shake"] = "停晃",
     ["Stop Dance"] = "停舞",
-    ["雷电出品"] = "菜鸟出品",
+    ["雷电出品"] = "KY出品",
     ["Online Count"] = "在线",
     ["椅子"] = "椅子",
     ["煤炭"] = "煤炭",
@@ -391,7 +391,6 @@ local Translations = {
     ["Do you want to close this window? You will not be able to open it again."] = "你是否要关闭这个窗口？关闭后将无法再次打开。",
     ["Cancel"] = "取消",
     ["Theme"] = "主题",
-    [""] = ""
 }
 
 
