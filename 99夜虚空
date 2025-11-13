@@ -386,7 +386,12 @@ local Translations = {
     ["This fixes most bugs in case the inf saplings bugs out :D"] = "若无限树苗出现BUG，此功能可修复大部分问题:D",
     ["实体上帝模式"] = "实体上帝模式",
     ["光环"] = "光环",
-    ["功能搜索"] = "汉化QQ群183441213"
+    ["功能搜索"] = "汉化QQ群183441213",
+    ["Close Window"] = "关闭窗口",
+    ["Do you want to close this window? You will not be able to open it again."] = "你是否要关闭这个窗口？关闭后将无法再次打开。",
+    ["Cancel"] = "取消",
+    ["Theme"] = "主题",
+    [""] = ""
 }
 
 
