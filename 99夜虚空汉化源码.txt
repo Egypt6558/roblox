@@ -408,7 +408,10 @@ local Translations = {
     ["Bring Fur Tuft"] = "带来皮毛材料",
     ["Capture Farm"] = "截取农场",
     ["Operation"] = "运营",
-    ["Halloween"] = "万圣节"
+    ["Halloween"] = "万圣节",
+    ["No items found to bring! Try exploring the map and try again :D"] = "不找到要带的物品！尝试探索地图，再试一次:D",
+    ["Successfully equipped Vampire class"] = "成功装备的吸血鬼类",
+    ["You must choose a house to tp to first!"] = "你必须先选择一所房子！"
 }
 
 
