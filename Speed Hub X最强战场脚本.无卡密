@@ -1,0 +1,184 @@
+local Translations = {
+    ["Home"] = "主页",
+    ["Server"] = "服务器",
+    ["Main"] = "主要",
+    ["Server Hop"] = "服务器切换",
+    ["Farming"] = "刷资源",
+    ["Server Hop [Low Player]"] = "服务器切换 [低人数]",
+    ["Killer"] = "杀手模式",
+    ["Nice"] = "辅助",
+    ["ESP"] = "透视",
+    ["ESP Player"] = "玩家透视",
+    ["Auto Kill"] = "自动击杀",
+    ["Auto Play To Kill"] = "自动游玩击杀",
+    ["Player"] = "玩家",
+    ["Select Player"] = "选择玩家",
+    ["Misc"] = "杂项",
+    ["Auto Kill Player"] = "自动击杀玩家",
+    ["Auto Play To Kill Player"] = "自动游玩击杀玩家",
+    ["Teleport Player"] = "传送玩家",
+    ["Spectate Player"] = "旁观玩家",
+    ["Auto Dodge Attack"] = "自动闪避攻击",
+    ["Auto Void"] = "自动虚空",
+    ["Auto Block"] = "自动格挡",
+    ["Anti-Slow"] = "防减速",
+    ["Character"] = "角色",
+    ["Choose Equip Character"] = "选择装备角色",
+    ["Equip Character"] = "装备角色",
+    ["Safe Mode"] = "安全模式",
+    ["Health"] = "生命值",
+    ["Until Health To Back"] = "生命值恢复至",
+    ["Auto To Safe Mode At Health"] = "在生命值低于时自动进入安全模式",
+    ["Bold"] = "样式",
+    ["Numeric"] = "数字",
+    ["Cyberg"] = "赛博",
+    ["Nifty"] = "漂亮",
+    ["Better"] = "更好",
+    ["Blacks"] = "黑色",
+    ["Expert"] = "专家",
+    ["Puzzle"] = "拼图",
+    ["Skill"] = "技能",
+    ["Auto Ultimate"] = "自动终极技能",
+    ["This is Morning Auto Use Ultimate"] = "这是早晨自动使用终极技能",
+    ["Auto Dash"] = "自动冲刺",
+    ["This is Morning Auto Use Dash"] = "这是早晨自动使用冲刺",
+    ["Time"] = "时间",
+    ["Notebooks/Bookmark"] = "笔记本/书签",
+    ["Aim"] = "瞄准",
+    ["Choose Aim Part"] = "选择瞄准部位",
+    ["Attribute"] = "属性",
+    ["Attribute + Look Camera Player"] = "属性 + 视角看向玩家",
+    ["Check Aim Part"] = "检查瞄准部位",
+    ["Attribute Look Camera Player"] = "属性视角看向玩家",
+    ["Body"] = "身体",
+    ["Anti-Knockback"] = "防击退",
+    ["Anti-Stun"] = "防眩晕",
+    ["Anti-Busy"] = "防忙碌",
+    ["BE TA"] = "测试版",
+    ["BETA"] = "测试版",
+    ["Speed Hub X | Official Server"] = "Speed Hub X | 官方服务器",
+    ["Join"] = "加入",
+    ["Local Player"] = "本地玩家",
+    ["Set WalkSpeed"] = "设置移动速度",
+    ["Set JumpPower"] = "设置跳跃力量",
+    ["Enable WalkSpeed"] = "启用移动速度",
+    ["This Client will be saved"] = "此客户端将被保存",
+    ["Enable JumpPower"] = "启用跳跃力量",
+    ["This Client will be removed"] = "此客户端将被移除",
+    ["No Clip"] = "穿墙模式",
+    ["Infinds Jump Ping"] = "无限跳跃 Ping"
+}
+
+local function translateText(text)
+    if not text or type(text) ~= "string" then return text end
+    
+    if Translations[text] then
+        return Translations[text]
+    end
+    
+    for en, cn in pairs(Translations) do
+        if text:find(en) then
+            return text:gsub(en, cn)
+        end
+    end
+    
+    return text
+end
+
+local function setupTranslationEngine()
+    local success, err = pcall(function()
+        local oldIndex = getrawmetatable(game).__newindex
+        setreadonly(getrawmetatable(game), false)
+        
+        getrawmetatable(game).__newindex = newcclosure(function(t, k, v)
+            if (t:IsA("TextLabel") or t:IsA("TextButton") or t:IsA("TextBox")) and k == "Text" then
+                v = translateText(tostring(v))
+            end
+            return oldIndex(t, k, v)
+        end)
+        
+        setreadonly(getrawmetatable(game), true)
+    end)
+    
+    if not success then
+        warn("元表劫持失败:", err)
+       
+        local translated = {}
+        local function scanAndTranslate()
+            for _, gui in ipairs(game:GetService("CoreGui"):GetDescendants()) do
+                if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                    pcall(function()
+                        local text = gui.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                gui.Text = translatedText
+                                translated[gui] = true
+                            end
+                        end
+                    end)
+                end
+            end
+            
+            local player = game:GetService("Players").LocalPlayer
+            if player and player:FindFirstChild("PlayerGui") then
+                for _, gui in ipairs(player.PlayerGui:GetDescendants()) do
+                    if (gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox")) and not translated[gui] then
+                        pcall(function()
+                            local text = gui.Text
+                            if text and text ~= "" then
+                                local translatedText = translateText(text)
+                                if translatedText ~= text then
+                                    gui.Text = translatedText
+                                    translated[gui] = true
+                                end
+                            end
+                        end)
+                    end
+                end
+            end
+        end
+        
+        local function setupDescendantListener(parent)
+            parent.DescendantAdded:Connect(function(descendant)
+                if descendant:IsA("TextLabel") or descendant:IsA("TextButton") or descendant:IsA("TextBox") then
+                    task.wait(0.1)
+                    pcall(function()
+                        local text = descendant.Text
+                        if text and text ~= "" then
+                            local translatedText = translateText(text)
+                            if translatedText ~= text then
+                                descendant.Text = translatedText
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+        
+        pcall(setupDescendantListener, game:GetService("CoreGui"))
+        local player = game:GetService("Players").LocalPlayer
+        if player and player:FindFirstChild("PlayerGui") then
+            pcall(setupDescendantListener, player.PlayerGui)
+        end
+        
+        while true do
+            scanAndTranslate()
+            task.wait(3)
+        end
+    end
+end
+
+task.wait(2)
+
+setupTranslationEngine()
+
+local success, err = pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+
+
+end)
+
+if not success then
+    warn("加载失败:", err)
+end
